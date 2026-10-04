@@ -1,0 +1,71 @@
+// Set A: 30 fixed items from the supplied A/B workbook (2026-09-27).
+// item_id is the A/B pair index; source_no is the native-validation source number.
+const GJT_ITEMS_A = [
+  {"item_id": 1, "source_no": 57, "category": "v-obj-obj", "verb": "give", "pattern": "v-obj-obj", "sentence": "She gave to me a book.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 2, "source_no": 2, "category": "v-obj-comp[bare-inf]", "verb": "make", "pattern": "v-obj-comp[bare-inf]", "sentence": "The movie made me to cry.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 3, "source_no": 11, "category": "v-obj-obj", "verb": "tell", "pattern": "v-obj-obj", "sentence": "She told me a story.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 4, "source_no": 4, "category": "v-obl[at]", "verb": "point", "pattern": "v-obl[at]", "sentence": "She pointed the map.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 5, "source_no": 58, "category": "v-comp", "verb": "become", "pattern": "v-comp", "sentence": "He became famous.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 6, "source_no": 56, "category": "v-obj", "verb": "find", "pattern": "v-obj", "sentence": "I found to my key.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 7, "source_no": 44, "category": "v-comp[to-inf]", "verb": "begin", "pattern": "v-comp[to-inf]", "sentence": "It began rain.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 8, "source_no": 30, "category": "v-obj", "verb": "meet", "pattern": "v-obj", "sentence": "I met my teacher.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 9, "source_no": 35, "category": "v-obj-obl[to]", "verb": "take", "pattern": "v-obj-obl[to]", "sentence": "My father took me to school.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 10, "source_no": 29, "category": "v-obj-comp[bare-inf]", "verb": "watch", "pattern": "v-obj-comp[bare-inf]", "sentence": "We watched the boy to play football.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 11, "source_no": 39, "category": "v-comp[to-inf]", "verb": "decide", "pattern": "v-comp[to-inf]", "sentence": "We decided to leave early.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 12, "source_no": 41, "category": "v-obj-comp[bare-inf]", "verb": "see", "pattern": "v-obj-comp[bare-inf]", "sentence": "I saw the boy cross the street.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 13, "source_no": 25, "category": "v-obj-obj", "verb": "show", "pattern": "v-obj-obj", "sentence": "He showed to me a picture.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 14, "source_no": 23, "category": "v-comp[to-inf]", "verb": "start", "pattern": "v-comp[to-inf]", "sentence": "The children started run.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 15, "source_no": 22, "category": "v-obl[to]", "verb": "come", "pattern": "v-obl[to]", "sentence": "She came to my school.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 16, "source_no": 24, "category": "v-obl[at]", "verb": "smile", "pattern": "v-obl[at]", "sentence": "The woman smiled the boy.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 17, "source_no": 37, "category": "v-obl[to]", "verb": "go", "pattern": "v-obl[to]", "sentence": "We went school.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 18, "source_no": 48, "category": "v-obj", "verb": "hear", "pattern": "v-obj", "sentence": "We heard the news.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 19, "source_no": 6, "category": "v-obl[to]", "verb": "talk", "pattern": "v-obl[to]", "sentence": "I talked to my friend.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 20, "source_no": 28, "category": "v-comp[that]", "verb": "hope", "pattern": "v-comp[that]", "sentence": "I hoped him to come.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 21, "source_no": 53, "category": "v-obl[at]", "verb": "look", "pattern": "v-obl[at]", "sentence": "The boy looked at the picture.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 22, "source_no": 55, "category": "v-comp[to-inf]", "verb": "want", "pattern": "v-comp[to-inf]", "sentence": "I wanted to visit Kyoto.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 23, "source_no": 17, "category": "v-obl[to]", "verb": "listen", "pattern": "v-obl[to]", "sentence": "We listened to music.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 24, "source_no": 12, "category": "v-comp[to-inf]", "verb": "try", "pattern": "v-comp[to-inf]", "sentence": "She tried open the door.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 25, "source_no": 43, "category": "v-obl[at]", "verb": "arrive", "pattern": "v-obl[at]", "sentence": "She arrived at the station.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 26, "source_no": 45, "category": "v-comp", "verb": "feel", "pattern": "v-comp", "sentence": "I felt to be tired.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 27, "source_no": 16, "category": "v-obj-comp[bare-inf]", "verb": "let", "pattern": "v-obj-comp[bare-inf]", "sentence": "My mother let me use her phone.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 28, "source_no": 10, "category": "v-obl[to]", "verb": "speak", "pattern": "v-obl[to]", "sentence": "She spoke the teacher.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 29, "source_no": 46, "category": "v-obj-obj", "verb": "ask", "pattern": "v-obj-obj", "sentence": "I asked my teacher a question.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 30, "source_no": 14, "category": "v-obj", "verb": "like", "pattern": "v-obj", "sentence": "I liked to this book.", "presented_status": "ungrammatical", "error_type": null}
+];
+
+// Set B: 30 fixed items from the supplied A/B workbook (2026-09-27).
+// item_id is the A/B pair index; source_no is the native-validation source number.
+const GJT_ITEMS_B = [
+  {"item_id": 1, "source_no": 3, "category": "v-obj-obj", "verb": "give", "pattern": "v-obj-obj", "sentence": "She gave me a book.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 2, "source_no": 62, "category": "v-obj-comp[bare-inf]", "verb": "make", "pattern": "v-obj-comp[bare-inf]", "sentence": "The movie made me cry.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 3, "source_no": 63, "category": "v-obj-obj", "verb": "tell", "pattern": "v-obj-obj", "sentence": "She told to me a story.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 4, "source_no": 60, "category": "v-obl[at]", "verb": "point", "pattern": "v-obl[at]", "sentence": "She pointed at the map.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 5, "source_no": 34, "category": "v-comp", "verb": "become", "pattern": "v-comp", "sentence": "He became to be famous.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 6, "source_no": 7, "category": "v-obj", "verb": "find", "pattern": "v-obj", "sentence": "I found my key.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 7, "source_no": 13, "category": "v-comp[to-inf]", "verb": "begin", "pattern": "v-comp[to-inf]", "sentence": "It began to rain.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 8, "source_no": 49, "category": "v-obj", "verb": "meet", "pattern": "v-obj", "sentence": "I met to my teacher.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 9, "source_no": 64, "category": "v-obj-obl[to]", "verb": "take", "pattern": "v-obj-obl[to]", "sentence": "My father took me school.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 10, "source_no": 19, "category": "v-obj-comp[bare-inf]", "verb": "watch", "pattern": "v-obj-comp[bare-inf]", "sentence": "We watched the boy play football.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 11, "source_no": 59, "category": "v-comp[to-inf]", "verb": "decide", "pattern": "v-comp[to-inf]", "sentence": "We decided leave early.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 12, "source_no": 26, "category": "v-obj-comp[bare-inf]", "verb": "see", "pattern": "v-obj-comp[bare-inf]", "sentence": "I saw the boy to cross the street.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 13, "source_no": 32, "category": "v-obj-obj", "verb": "show", "pattern": "v-obj-obj", "sentence": "He showed me a picture.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 14, "source_no": 65, "category": "v-comp[to-inf]", "verb": "start", "pattern": "v-comp[to-inf]", "sentence": "The children started to run.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 15, "source_no": 36, "category": "v-obl[to]", "verb": "come", "pattern": "v-obl[to]", "sentence": "She came my school.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 16, "source_no": 38, "category": "v-obl[at]", "verb": "smile", "pattern": "v-obl[at]", "sentence": "The woman smiled at the boy.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 17, "source_no": 52, "category": "v-obl[to]", "verb": "go", "pattern": "v-obl[to]", "sentence": "We went to school.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 18, "source_no": 18, "category": "v-obj", "verb": "hear", "pattern": "v-obj", "sentence": "We heard to the news.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 19, "source_no": 66, "category": "v-obl[to]", "verb": "talk", "pattern": "v-obl[to]", "sentence": "I talked my friend.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 20, "source_no": 54, "category": "v-comp[that]", "verb": "hope", "pattern": "v-comp[that]", "sentence": "I hoped that he would come.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 21, "source_no": 31, "category": "v-obl[at]", "verb": "look", "pattern": "v-obl[at]", "sentence": "The boy looked the picture.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 22, "source_no": 20, "category": "v-comp[to-inf]", "verb": "want", "pattern": "v-comp[to-inf]", "sentence": "I wanted visit Kyoto.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 23, "source_no": 1, "category": "v-obl[to]", "verb": "listen", "pattern": "v-obl[to]", "sentence": "We listened music.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 24, "source_no": 47, "category": "v-comp[to-inf]", "verb": "try", "pattern": "v-comp[to-inf]", "sentence": "She tried to open the door.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 25, "source_no": 50, "category": "v-obl[at]", "verb": "arrive", "pattern": "v-obl[at]", "sentence": "She arrived the station.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 26, "source_no": 61, "category": "v-comp", "verb": "feel", "pattern": "v-comp", "sentence": "I felt tired.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 27, "source_no": 8, "category": "v-obj-comp[bare-inf]", "verb": "let", "pattern": "v-obj-comp[bare-inf]", "sentence": "My mother let me to use her phone.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 28, "source_no": 33, "category": "v-obl[to]", "verb": "speak", "pattern": "v-obl[to]", "sentence": "She spoke to the teacher.", "presented_status": "grammatical", "error_type": null},
+  {"item_id": 29, "source_no": 40, "category": "v-obj-obj", "verb": "ask", "pattern": "v-obj-obj", "sentence": "I asked to my teacher a question.", "presented_status": "ungrammatical", "error_type": null},
+  {"item_id": 30, "source_no": 21, "category": "v-obj", "verb": "like", "pattern": "v-obj", "sentence": "I liked this book.", "presented_status": "grammatical", "error_type": null}
+];
+
+const GJT_ITEMS = GJT_SET_ID === "A" ? GJT_ITEMS_A : GJT_ITEMS_B;
