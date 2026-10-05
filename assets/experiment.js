@@ -42,7 +42,7 @@ jsPsych.data.addProperties({
 
 const timeline = [];
 const TASK_MODE = TASK_MODE_CONFIG;
-const version = "main_gjt_teams_only_2026-10-04_v1";
+const version = "main_gjt_teams_only_2026-10-05_v2";
 jsPsych.data.addProperties({
   task_mode: TASK_MODE,
   experiment_version: version,
@@ -50,6 +50,8 @@ jsPsych.data.addProperties({
   gjt_set: GJT_SET_ID,
   counterbalance_sequence: ADMINISTRATION_LABEL === "pre" ? (GJT_SET_ID === "A" ? "AB" : "BA") : (GJT_SET_ID === "A" ? "BA" : "AB"),
   allocation_method: "teams_fixed_link",
+  assignment_version: ASSIGNMENT_VERSION,
+  planned_allocation_method: "department_adjacent_irt_pair_random",
   identity_verified: false,
   assigned_input_device: "physical_keyboard",
   administration_label: ADMINISTRATION_LABEL
@@ -96,6 +98,7 @@ timeline.push({
       on_finish: data => {
         enteredIdentity = {
           participant_id: normalizeStudentNumber(data.response.participant_id),
+          student_number: normalizeStudentNumber(data.response.participant_id),
           participant_name_jp: String(data.response.participant_name_jp).trim(),
           participant_name_normalized: normalizeJapaneseName(data.response.participant_name_jp)
         };
