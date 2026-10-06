@@ -166,9 +166,11 @@ timeline.push({
     `<div class="task-card instruction-card">
       <h2>回答上の注意</h2>
       <p>文の内容ではなく、英語の文法として判断してください。</p>
+      <p>この課題では、<strong>答えの正しさ</strong>と、<strong>英文が表示されてから回答するまでの時間</strong>を記録します。</p>
+      <p>英文をよく読み、正しいかどうか判断できたら、<strong>なるべく早く回答してください。</strong>速さだけを優先せず、正確に答えることも大切です。</p>
       <p><strong>No：Aキー</strong>　　<strong>Yes：Lキー</strong></p>
       <p>回答はキーボードのみで行ってください。</p>
-      <p>迷った場合も、どちらか一方を選んでください。</p>
+      <p>迷った場合も、<strong>10秒以内</strong>にどちらかを選んでください。</p>
       <p>最初に練習を2問行い、その後${GJT_ITEM_COUNT}問の本課題に進みます。</p>
     </div>`
   ],
